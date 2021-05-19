@@ -8,7 +8,7 @@ const password = document.getElementById("password");
 
 socket.on("gotAllData", (data) => {
   console.clear();
-  console.log("Got all data");
+  console.log("Got all data.");
   console.log(data);
 });
 
