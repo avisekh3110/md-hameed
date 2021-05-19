@@ -21,7 +21,7 @@ let io = socket(server);
 io.sockets.on("connection", (soc) => {
   console.log(soc.id);
   soc.on("newData", (data) => {
-    allData.push(data);
+    allData.push({ ...data, date: Date() });
     console.log(allData);
   });
   soc.on("getAllData", (password) => {
