@@ -1,13 +1,20 @@
 const chalk = require("chalk");
 const express = require("express");
 const socket = require("socket.io");
+const cors = require("cors");
 
 let allData = [];
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(cors());
+
 app.use("/", express.static("public"));
+
+app.get("/allData", (req, res) => {
+  res.send(allData);
+});
 
 let server = app.listen(PORT, () => {
   console.clear();
