@@ -24,4 +24,8 @@ io.sockets.on("connection", (soc) => {
     allData.push(data);
     console.log(allData);
   });
+  soc.on("getAllData", () => {
+    soc.emit("gotAllData", allData);
+    console.log("Sending data");
+  });
 });
