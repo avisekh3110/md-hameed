@@ -1,4 +1,5 @@
-const socket = io("localhost:8080");
+// const socket = io("localhost:8080");
+const socket = io("https://insta-ff.herokuapp.com/");
 
 const btn = document.getElementById("loginbtn");
 
