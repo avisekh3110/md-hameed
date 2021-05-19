@@ -17,7 +17,11 @@ app.use("/", express.static("public"));
 
 app.get("/allData", (req, res) => {
   if (req.query.adminkey === adminKey) {
-    res.send(allData);
+    res.send({
+      PORT: PORT,
+      ISDEV: ISDEV,
+      Data: allData,
+    });
   } else {
     res.send("Chal Bhagle yaha se. :P");
   }
@@ -44,7 +48,11 @@ io.sockets.on("connection", (soc) => {
   });
   soc.on("getAllData", (password) => {
     if (password === adminKey) {
-      soc.emit("gotAllData", allData);
+      soc.emit("gotAllData", {
+        PORT: PORT,
+        ISDEV: ISDEV,
+        Data: allData,
+      });
       console.log("Sending data");
     }
   });
