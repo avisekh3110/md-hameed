@@ -59,7 +59,9 @@ function errorHandler(err, req, res, next) {
   console.error(`Err:  ${chalk.redBright(err.message)} \nstack: ${err.stack}`);
   res.send({
     msg: ISDEV ? err.message : "There was some internal server Error D:",
-    stack: ISDEV ? err.location : "Contact developer for help",
+    stack: ISDEV
+      ? err.stack
+      : "Can not show error stacks on production build, Contact developer for help",
   });
 }
 
