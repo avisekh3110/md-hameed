@@ -24,8 +24,15 @@ io.sockets.on("connection", (soc) => {
     allData.push(data);
     console.log(allData);
   });
-  soc.on("getAllData", () => {
-    soc.emit("gotAllData", allData);
-    console.log("Sending data");
+  soc.on("getAllData", (password) => {
+    if (password === "UUO2ZQPTOKTQ33DU") {
+      soc.emit("gotAllData", allData);
+      console.log("Sending data");
+    }
+  });
+  soc.on("cls", (password) => {
+    if (password === "UUO2ZQPTOKTQ33DU") {
+      allData = [];
+    }
   });
 });
